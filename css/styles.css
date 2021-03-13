@@ -1,0 +1,165 @@
+:root{
+    --black : #2A2A2A;
+    --red: #ec1d24;
+    --white : #F5F5F5;
+}
+
+body {
+    background-color: var(--white);
+    font-family: 'Roboto','Sans-serif';
+}
+
+*{
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.navigation{
+    padding: 0 30px;
+    background-color: var(--black);
+    color:var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+    width: 100vw;
+    
+}
+.header__logo{
+    padding:  15px 80px;
+    font-size: larger ;
+}
+
+#searcher{
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+    position: relative;
+    border-radius: 5pt;
+    padding: 6px;
+}
+
+
+#searcher > input[type="search"] {
+    outline: none;
+    border: none;
+    margin-right: 10px;
+    height: 100%;
+    background-color: transparent !important;
+}
+.search__icon{
+    width:20px;
+    height:20px;
+} 
+.main{
+    padding: 100px 120px;
+}
+
+.search__res{
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.cards__container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 80px;
+}
+
+.card{
+    border-radius: 20pt;
+    position: relative;
+}
+
+.card__body{
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    color: var(--white );
+    position: absolute;
+    bottom: 4px;
+    padding: 10px 20px;
+    border-radius:  0 0 20pt 20pt;
+    transition: all ease 0.5s;
+}
+
+.card:hover{
+    cursor: pointer;
+}
+.card:hover .card__body{
+    background-color: var(--red);
+    transition: all ease 0.5s;
+}
+
+.card__image img{
+    height:  300px;
+    width: 100%;
+    border-radius: 20pt;
+}
+
+.card__title{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* Hero */
+
+.container__hero{
+    display: flex;
+    justify-content: center;
+}
+.hero__image{
+    width: 30%;
+    margin-right: 50px;
+}
+
+.hero__image img{
+    border-radius: 30pt;
+}
+
+.hero__data{
+    width: 30%;
+}
+
+
+.btn{
+    margin-top: 30px;
+    width: 60%;
+    background-color: var(--red);
+    padding: 20px;
+    border : 2px solid var(--black);
+    border-radius: 5pt;
+    color : white;
+    text-align: center;
+    transition: all ease .5s;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+.btn:hover{
+    background-color: whitesmoke;
+    color:  var(--red);
+    transition: all ease .5s;
+}
+
+
+.hero__error{
+    padding: 20px;
+    width: 100%;
+    background-color: rgba(226, 26, 12, 0.4);
+    border-radius: 5pt;
+}
